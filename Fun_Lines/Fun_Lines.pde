@@ -4,7 +4,7 @@ static final int NUM_LINES = 10;
 void setup() {
 
   background(20);
-  size (500, 500);
+  size (displayWidth, displayHeight);
 
 }
 
@@ -32,24 +32,24 @@ void draw() {
 
 
 float x1(float t)  {
-  return 100 * sin(t/10) + 2*sin(t);
+  return width/2 * sin(t/10) + 2*cos(t);
 }
   
   
 float y1(float t) {
 
-  return 200 * cos(t/20) + 50 * sin(t/20);
+  return height/4 * sin(t/20) + height/2 * cos(t/20);
 
 }
 
 
 float x2(float t)  {
-  return 100 * sin(t/10) + 2*sin(t);
+  return 100 * sin(t/10) + 2*cos(t);
 }
   
   
 float y2(float t) {
 
-  return 200 * cos(t/20) - 50 * cos(t/20);
+  return 200 * sin(t/20) - 50 * cos(t/20);
 
 }
