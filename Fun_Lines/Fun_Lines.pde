@@ -1,5 +1,5 @@
 float t; 
-static final int NUM_LINES = 10;
+static final int NUM_LINES = 60;
 
 void setup() {
 
