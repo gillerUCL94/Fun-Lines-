@@ -12,6 +12,8 @@ void draw() {
  
  //translate(width/2, height/2);
  
+ //Add a function to gert line back
+ 
  rect(t, 0, 30, height, 100);
  stroke(255);
  
