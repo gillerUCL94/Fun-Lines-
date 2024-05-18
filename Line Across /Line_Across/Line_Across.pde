@@ -1,10 +1,10 @@
 float t;
 float s;
-static final int W_rect = 30;
+static final int W_rect = 100;
 
 void setup() {
   background(0);
-  size(500, 500);
+  size(displayWidth, displayHeight);
 }
 
 
@@ -16,6 +16,13 @@ void draw() {
  
  //Add a function to gert line back
  
+ stroke(255,0,0);
+ //rect(t, 0, W_rect + 5, height);
+ //Draw to outer lines that glow 
+ line(t, 0, t, height);
+ line(t, 0, t, height  + W_rect);
+ //filter( BLUR, 3);
+ fill(255);
  rect(t, 0, W_rect, height);
  stroke(255);
  
@@ -24,12 +31,12 @@ void draw() {
    rect(0, 0, s, height);
    rect(t, 0, W_rect, height);
    stroke(255);
-   s += 6;
+   s += 4;
  }
  
  if (t  >= width ){
  t = 0;
  s = 0;
  }
- t += 6;
+ t += 4;
 }
