@@ -1,4 +1,6 @@
 float t;
+float s;
+static final int W_rect = 30;
 
 void setup() {
   background(0);
@@ -14,11 +16,20 @@ void draw() {
  
  //Add a function to gert line back
  
- rect(t, 0, 30, height, 100);
+ rect(t, 0, W_rect, height);
  stroke(255);
  
- if (t >= width){
- t = 0;
+ 
+ if (width - t < W_rect){
+   rect(0, 0, s, height);
+   rect(t, 0, W_rect, height);
+   stroke(255);
+   s += 6;
  }
- t += 3;
+ 
+ if (t  >= width ){
+ t = 0;
+ s = 0;
+ }
+ t += 6;
 }
